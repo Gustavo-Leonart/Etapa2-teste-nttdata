@@ -1,0 +1,41 @@
+@base: #c6c6c6;
+@textColor: #000000;
+@width: 1;
+@pad: 32px;
+@type: column;
+@display: flex;
+@mobile: 599px;
+
+.navbar{
+  padding-top: @pad;
+  padding-bottom: @pad;
+}
+
+.container {
+  width: percentage(@width);
+  color: saturate(@textColor, 100%);
+  background-color: spin(lighten(@base, 100%), 8);
+  margin-top: @pad;
+  margin-bottom: @pad;
+}
+
+.jumbotron{
+  margin-top: @pad;
+  margin-bottom: @pad;
+}
+
+.footer{
+  width: percentage(@width);
+}
+
+.conteudo__filme{
+  display: @display;
+  margin-bottom: @pad;
+  margin-top: @pad;
+}
+
+@media screen and (max-width: @mobile) {
+  .conteudo__filme{
+    flex-direction: @type;
+  }
+}
